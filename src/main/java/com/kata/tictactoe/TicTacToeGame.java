@@ -10,6 +10,10 @@ public class TicTacToeGame {
     private char currentPlayer;
     private int totalTurnsPlayed;
 
+    public char[][] getGameBoardLayout() {
+        return gameBoardLayout;
+    }
+
     public String playTurnAt(final int positionX, final int positionY) throws PositionAlreadyInUseException, PositionOutOfGridException {
         checkIsPositionOutOfGameBoardGrid(positionX, positionY);
         checkIsPositionAlreadyFilled(positionX, positionY);
